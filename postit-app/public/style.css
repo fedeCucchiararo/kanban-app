@@ -1,13 +1,36 @@
 
+body {
+    background-color: grey;
+}
 
+.main__title {
+    color: white;
+}
 
+.main__form {
+    width: 50%;
+}
+
+.main__input {
+    width: 100%;
+}
 
 .fa-sticky-note {
     color: gold;
 }
 
+.fa-plus {
+    display: inline-block;
+}
+
 .error {
     color: red;
+}
+
+.main__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    align-self: center;
 }
 
 .kanban-columns {
@@ -26,6 +49,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.kanban-column--title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
 
 .kanban-item {

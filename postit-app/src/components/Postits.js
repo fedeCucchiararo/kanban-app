@@ -113,25 +113,25 @@ class Postits extends Component {
 
 
     render() {
-        return <div>
-            <h1>Post-It App <i className="fas fa-sticky-note"></i></h1>
+        return <div className='main'>
+            <h1 className='main__title'>Kanban-App <i className="fas fa-sticky-note"></i></h1>
 
             <InputForm onSubmit={this.handleSubmit} />
             <div className='kanban-columns'>
                 <section className='kanban-column'>
-                    <h2>TODO</h2>
+                    <h2 className='kanban-column--title'>To do</h2>
                     {this.state.board.todo.map(postit => <Post key={postit.id} status={'todo'} text={postit.text} id={postit.id} onDeletePost={this.handleRemovePostit} onUpdatePost={this.handleModifyPostit} onChangeColumn={this.handleChangeColumn} />)}
                 </section>
                 <section className='kanban-column'>
-                    <h2>DOING</h2>
+                    <h2 className='kanban-column--title'>Doing</h2>
                     {this.state.board.doing.map(postit => <Post key={postit.id} status={'doing'} text={postit.text} id={postit.id} onDeletePost={this.handleRemovePostit} onUpdatePost={this.handleModifyPostit} onChangeColumn={this.handleChangeColumn}/>)}
                 </section>
                 <section className='kanban-column'>
-                    <h2>REVIEW</h2>
+                    <h2 className='kanban-column--title'>Review</h2>
                     {this.state.board.review.map(postit => <Post key={postit.id} status={'review'} text={postit.text} id={postit.id} onDeletePost={this.handleRemovePostit} onUpdatePost={this.handleModifyPostit} onChangeColumn={this.handleChangeColumn}/>)}
                 </section>
                 <section className='kanban-column'>
-                    <h2>DONE</h2>
+                    <h2 className='kanban-column--title'>Done</h2>
                     {this.state.board.done.map(postit => <Post key={postit.id} status={'done'} text={postit.text} id={postit.id} onDeletePost={this.handleRemovePostit} onUpdatePost={this.handleModifyPostit} onChangeColumn={this.handleChangeColumn}/>)}
                 </section>
             </div>
